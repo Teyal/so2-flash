@@ -137,6 +137,13 @@ template<> struct Traits<Scratchpad>: public Traits<Machine_Common>
     static const unsigned int SIZE = 96 * 1024;
 };
 
+template<> struct Traits<Flash>: public Traits<Machine_Common>
+{
+    static const bool enabled = true;
+    static const unsigned int ADDRESS = 0xb0000; // VGA Graphic mode frame buffer
+    static const unsigned int SIZE = 1024 * 1024;
+};
+
 template<> struct Traits<FPGA>: public Traits<Machine_Common>
 {
     static const bool enabled = false;

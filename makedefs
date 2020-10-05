@@ -86,8 +86,8 @@ SYS_CODE_ADDR           = $(shell $(BIN)/eposcfg SYS_CODE 2> /dev/null)
 SYS_DATA_ADDR           = $(shell $(BIN)/eposcfg SYS_DATA 2> /dev/null)
 UUID                    = $(shell cat /proc/sys/kernel/random/uuid | sed 's/-//g')
 
-# Compiler prefixes
-ia32_COMP_PREFIX	:= /usr/bin/x86_64-linux-gnu-
+# Compiler prefixes        #/usr/bin/x86_64-linux-gnu- 
+ia32_COMP_PREFIX	:= $(HOME)/opt/cross/bin/i686-elf-
 armv7_COMP_PREFIX	:= /usr/bin/arm-none-eabi-
 armv8_COMP_PREFIX	:= /usr/bin/arm-none-eabi-
 COMP_PREFIX		= $($(ARCH)_COMP_PREFIX)

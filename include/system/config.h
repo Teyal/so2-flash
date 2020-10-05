@@ -7,15 +7,15 @@
 // ARCHITECTURE, MACHINE, AND APPLICATION SELECTION
 // This section is generated automatically from makedefs by $EPOS/etc/makefile
 //============================================================================
-#define SMOD xxx
-#define ARCH xxx
-#define MACH xxx
-#define MMOD xxx
-#define APPL xxx
-#define __mode_xxx__
-#define __arch_xxx__
-#define __mach_xxx__
-#define __mmod_xxx__
+#define SMOD library
+#define ARCH ia32
+#define MACH pc
+#define MMOD legacy_pc
+#define APPL hello
+#define __mode_library__
+#define __arch_ia32__
+#define __mach_pc__
+#define __mmod_legacy_pc__
 
 //============================================================================
 // NAMESPACES AND DEFINITIONS
@@ -94,6 +94,7 @@ namespace EPOS {
 #define __DISPLAY_H             __HEADER_MACH(display)
 #define __KEYBOARD_H            __HEADER_MACH(keyboard)
 #define __SCRATCHPAD_H          __HEADER_MACH(scratchpad)
+#define __FLASH_H               __HEADER_MACH(flash_mem)
 #define __NIC_H                 __HEADER_MACH(nic)
 #define __ethernet__
 #define __FPGA_H                __HEADER_MACH(fpga)

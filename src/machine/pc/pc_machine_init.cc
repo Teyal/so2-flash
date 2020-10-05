@@ -20,6 +20,9 @@ void Machine::init()
     if(Traits<Scratchpad>::enabled)
         Scratchpad::init();
 
+    if(Traits<Flash>::enabled)
+        Flash::init();
+
 #ifdef __KEYBOARD_H
     if(Traits<Keyboard>::enabled)
         Keyboard::init();
